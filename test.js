@@ -31,9 +31,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         var pure_price = price.slice(0,0)+price.slice(1);
 
         var board = document.createElement('tr');
-        //board.className='card col-sm-4';
-        board.innerHTML='<td class="mdl-data-table__cell--non-numeric">'+nameCapitalized+'</td><td>'+stock+'</td><td>'+price+'</td></tr><td><a href="javascript:void(0);" onclick="return shopping();"><i class="material-icons">add_circle</i></a></td>';
-        //board.innerHTML='<div class="card-body"><h5 class="card-title">'+pname+'</h5><p class="card-text">'+price+'</p><a href="#" class="btn btn-primary">BUY</a></div>';
+        board.innerHTML='<td class="mdl-data-table__cell--non-numeric">'+nameCapitalized+'</td><td>'+stock+'</td><td>'+price+'</td></tr><td><a href="javascript:void(0);" onclick=\'shopping("'+nameCapitalized+'",'+pure_price+')\'><i class="material-icons">add_circle</i></a></td>';
         //var node = document.createTextNode(pname);
         //board.appendChild(node);
         document.getElementById('board').appendChild(board);
@@ -81,9 +79,19 @@ function logout(){
 }
 
 var items = 0;
-function shopping(){
+var total_price = 0;
+
+function shopping(nameCapitalized, pure_price){
   items++;
+  total_price += pure_price;
   document.getElementById('inc').setAttribute("data-badge", items);
+  
+  var cart_item = document.createElement('tr');
+
+  cart_item.innerHTML='<td class="mdl-data-table__cell--non-numeric">'+nameCapitalized+'</td><td>1</td><td>$'+pure_price.toFixed(2)+'</td>';
+  document.getElementById('carthere').appendChild(cart_item);
+  rounded_number = total_price.toFixed(2)
+  document.getElementById('tot').innerHTML = "TOTAL $"+rounded_number;
 }
 
 var startF=21;
