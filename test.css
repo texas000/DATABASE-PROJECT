@@ -14,8 +14,7 @@
   text-align: center;
 }
 
-.main-div h3,
-.loggedin-div #greeting {
+.main-div h3 {
   margin-top: 10px;
   margin-bottom: 20px;
   font-family: 'Nunito', sans-serif;
@@ -45,7 +44,7 @@
 
 .loggedin-div h4,
 .loggedin-div p {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Fugaz One', cursive;
   text-align: center;
 }
 
@@ -86,6 +85,16 @@
   text-align: center;
   position: relative;
   opacity: 0.5;
+}
+
+#banner h1 {
+  font-family: 'Fugaz One', cursive;
+  color: white;
+}
+
+#banner h3 {
+  font-family: 'Fugaz One', cursive;
+  color: white;
 }
 
 #banner .flex {

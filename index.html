@@ -38,6 +38,7 @@
       
       <!--NAVIGATOR-->
       <nav class="navbar fixed-top navbar-light bg-light">
+          <img id="logo" src="https://image.flaticon.com/icons/svg/817/817276.svg" width="70" height="70">
         <a class="navbar-brand" href="#">Fresh Flash</a>
         <button onclick="logout()" class="btn btn-outline-danger">Logout</button>
       </nav>
@@ -48,18 +49,55 @@
                 <div class="inner">
                     <header>
                       <div class= flex>
-                        <h1 id="greeting">Welcome to Online Grocery Store</h1>
+                        <h1>Welcome to Online Grocery Store</h1>
+                        <h3>Order fresh groceries online</h3>
                       </div>
               </section>
 
       <!--CONTEXT-->
       <div class="row">  
         <div class="col-md-10 offset-md-1 text-center">
-            <h4>Fruits & Vegetables</h4>
-            
+            <h4 style="margin-top:100px;">Fruits & Vegetables</h4>
+            <div class="row">
+                <div class="col-sm">
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://images-gmi-pmc.edge-generalmills.com/b9272720-c6bf-4288-92f7-43542067af7c.jpg" height = 150 class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Chocolate Cookie</p>
+                      <p class="card-text">Homemade style chocolate cookie</p>
+
+                      <p class="card-text text-right" >$3.36 <s style = "color:gray"> $3.99</s></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://culinaryginger.com/wp-content/uploads/Mexican-Style-Hot-Dogs-picture-11-720x405.jpg" height=150 class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Hot Dogs
+                      </p>
+                      <p class="card-text">Served with fresh jalapeno, onion, and salsa</p>
+
+                      <p class="card-text text-right" >$8.32 <s style = "color:gray"> $8.99</s></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-sm">
+                  <div class="card" style="width: 18rem;">
+                    <img src="https://www.dudleysquaregrille.com/files/images/about-us.jpg" height =150 class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <p class="card-text">Pizza</p>
+                      <p class="card-text">Peperoni / Combination / Cheese / Vegeterian</p>
+
+                      <p class="card-text text-right" >$6.55 <s style = "color:gray"> $6.99</s></p>
+
+                    </div>
+                  </div>
+                </div>
+                </div>
             <!--TABLE START-->
             <div class="list-group">
-              <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+              <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp" style="margin-top:100px;">
                 <thead>
                   <tr>
                     <th class="mdl-data-table__cell--non-numeric">Product</th>
